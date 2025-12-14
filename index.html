@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narsimha Infotech - Driving Digital Transformation</title>
+    
+    <style>
+/* * Narsimha Infotech - Master Style Sheet
+ * Theme: TCS Professional Corporate Style with South Indian Accents
+ * Color Palette: 
+ * - Primary/Corporate: #004D40 (Deep Teal/Navy)
+ * - Accent/CTA: #FFCC00 (Deep Gold/Saffron)
+ * - Detail/Headers: #88001B (Deep Crimson/Maroon)
+ * - Base Background: #FFFFFF (Clean White)
+ */
+
+/* --- 1. General Reset and Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFFF; /* Clean White Base */
+    color: #333333; /* Dark Grey Text */
+}
+
+a {
+    text-decoration: none;
+    color: #004D40;
+}
+
+/* --- 2. Header and Navigation Styling --- */
+header {
+    background: #004D40; /* Deep Teal/Navy */
+    color: #FFFFFF;
+    padding: 18px 5%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2.0em; /* Kept for general spacing/alignment */
+    font-weight: 600; 
+}
+
+/* Specific styling for the logo image */
+.logo img {
+    height: 40px; /* Adjust height for visual balance */
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #FFCC00; /* Gold accent on hover/active */
+    border-bottom: 3px solid #FFCC00; /* Underline accent */
+}
+
+/* --- 3. Global Components --- */
+
+/* CTA Button (Gold Accent) */
+.cta-button {
+    display: inline-block;
+    background: #FFCC00; 
+    color: #333333;
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+.cta-button:hover {
+    background: #E6B800;
+}
+
+/* Secondary CTA Button Style (for pricing tiers) */
+.cta-button.secondary {
+    background: #88001B; /* Deep Crimson button */
+    color: white;
+}
+.cta-button.secondary:hover {
+    background: #6a0015;
+}
+
+/* Page Hero Section (used on About, Services, Contact) */
+.page-hero {
+    background: #004D40; 
+    color: #FAF9F6;
+    padding: 60px 5%;
+    text-align: center;
+}
+.page-hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+.page-hero p {
+    font-size: 1.1em;
+}
+
+/* --- 4. Homepage (index.html) Styles --- */
+
+/* Hero Section (TCS Style) */
+.hero-tcs-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    min-height: 450px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #eee;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-tcs-style .tagline-subhead {
+    color: #004D40;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-tcs-style h1 {
+    font-size: 3.5em;
+    color: #333333;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.hero-graphic {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Impact Metrics Section */
+.impact-metrics {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 5%;
+    background-color: #f8f8f8;
+    border-bottom: 5px solid #FFCC00; /* Thematic accent line */
+}
+
+.metric-card {
+    text-align: center;
+}
+
+.metric-card h3 {
+    font-size: 3em;
+    color: #004D40; 
+    font-weight: 700;
+}
+
+.metric-card p {
+    color: #555;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Solutions Preview (TCS Look) */
+.services-preview-tcs {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.services-preview-tcs h2 {
+    font-size: 2.2em;
+    color: #004D40;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.solution-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.solution-cards .card {
+    flex-basis: 30%;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+    border-left: 5px solid #FFCC00; /* Thematic left border accent */
+    transition: all 0.3s;
+    text-align: left;
+}
+
+.solution-cards .card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.icon-placeholder {
+    font-size: 2.5em;
+    color: #88001B; /* Deep Crimson icon color */
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Thought Leadership Section */
+.thought-leadership {
+    padding: 60px 5%;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.thought-leadership h2 {
+    color: #004D40;
+    margin-bottom: 30px;
+}
+
+.insight-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-left: 8px solid #004D40; /* Strong corporate accent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.insight-date {
+    color: #FFCC00;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.read-more-link {
+    color: #004D40;
+    text-decoration: none;
+    font-weight: bold;
+}
+.read-more-link:hover {
+    color: #FFCC00;
+}
+
+/* --- 5. About Us (about.html) Styles --- */
+
+.team-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #FAF9F6;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    color: #004D40;
+    margin-bottom: 10px;
+}
+
+.team-intro {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.team-cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    justify-content: center;
+}
+
+.team-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid #FFCC00; /* South Indian Theme accent */
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 3px solid #004D40;
+}
+
+.team-card h3 {
+    color: #88001B; /* Deep Crimson */
+    margin-bottom: 5px;
+}
+
+.team-card .role {
+    font-weight: bold;
+    color: #004D40; /* Peacock Blue */
+    margin-bottom: 10px;
+}
+
+.team-card .bio {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* --- 6. Services (services.html) Styles - Tables --- */
+
+.pricing-tiers-section {
+    padding: 60px 5%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.pricing-tiers-section.light-bg {
+    background-color: #f8f8f8;
+}
+
+.pricing-tiers-section .section-heading {
+    color: #004D40;
+    margin-bottom: 5px;
+}
+
+.pricing-tiers-section .accent-line {
+    border-bottom: 3px solid #FFCC00; /* Gold underline for heading */
+    padding-bottom: 5px;
+}
+
+.table-container {
+    overflow-x: auto; 
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.table-container.narrow-table {
+    max-width: 800px; 
+}
+
+.corporate-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.corporate-table th, .corporate-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.corporate-table thead th {
+    background-color: #004D40; 
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.corporate-table .price-column {
+    text-align: right;
+    font-weight: bold;
+    color: #88001B; 
+    width: 150px; 
+}
+
+.corporate-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.corporate-table .highlight-row {
+    background-color: #FFFBE6; /* Light Gold background */
+    border-left: 5px solid #FFCC00;
+    font-weight: 600;
+}
+
+.corporate-table .highlight-row-subtle {
+    background-color: #f3f9f9; 
+}
+
+/* --- 7. Contact Us (contact.html) Styles --- */
+
+.contact-grid-section {
+    display: flex;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #FFFFFF;
+}
+
+.contact-form-container {
+    flex: 2; 
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-container {
+    flex: 1.5;
+    padding: 30px 0;
+}
+
+.contact-form-container h2, .contact-info-container h2 {
+    color: #004D40;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #FFCC00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Form Styling */
+.corporate-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.corporate-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.corporate-form input[type="text"], 
+.corporate-form input[type="email"], 
+.corporate-form select, 
+.corporate-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.corporate-form input:focus, .corporate-form textarea:focus, .corporate-form select:focus {
+    border-color: #004D40; 
+    outline: none;
+}
+
+/* Contact Info Styling */
+.info-block {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    text-align: left;
+}
+
+.info-block h3 {
+    color: #88001B; 
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.info-block p {
+    color: #555;
+}
+
+.info-icon {
+    font-size: 1.5em;
+    color: #FFCC00; 
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Map Placeholder Styling */
+.map-placeholder {
+    height: 200px;
+    background-color: #e0e0e0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 4px;
+    overflow: hidden; 
+}
+.map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- 8. Footer Styling --- */
+footer {
+    background: #004D40;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 5%;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #FFCC00;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+    </style>
+    </head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://uploads.onecompiler.io/447ffsnrp/447fg4m6w/IMG-20250907-WA0000.jpg" alt="Narsimha Infotech Company Logo" style="height: 40px; vertical-align: middle;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home-section" class="active">Home</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#about-section">About Us</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-section" class="hero-tcs-style">
+            <div class="hero-content">
+                <p class="tagline-subhead">Rooted in Reliability. Focused on Future-Tech.</p>
+                <h1>Partnering for Growth and Transformation.</h1>
+                <a href="#contact-section" class="cta-button">Explore Solutions</a>
+            </div>
+            <img src="https://uploads.onecompiler.io/447ffsnrp/447ff2sg6/copilot_image_1765629624542.jpeg" alt="Abstract digital illustration representing technology" class="hero-graphic">
+        </section>
+
+        <section class="impact-metrics">
+            <div class="metric-card">
+                <h3>85%</h3>
+                <p>Digital Transformation Success Rate</p>
+            </div>
+            <div class="metric-card">
+                <h3>15+</h3>
+                <p>Years of Combined Industry Experience</p>
+            </div>
+            <div class="metric-card">
+                <h3>24/7</h3>
+                <p>Global Support & Reliability</p>
+            </div>
+        </section>
+
+        <section class="services-preview-tcs">
+            <h2>Our Core Solutions</h2>
+            <p class="section-description">We help businesses adapt, innovate, and thrive across various domains.</p>
+            <div class="solution-cards">
+                <div class="card">
+                    <span class="icon-placeholder">🌐</span>
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Building secure, scalable, and resilient cloud environments tailored for your business.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-placeholder">📱</span>
+                    <h3>Application Development</h3>
+                    <p>Custom software that drives efficiency and enhances customer interaction across platforms.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-placeholder">🔒</span>
+                    <h3>Cybersecurity</h3>
+                    <p>Protecting your digital assets with advanced, proactive security measures and consulting.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="thought-leadership">
+            <h2>Insights & Innovation</h2>
+            <div class="insight-container">
+                <div class="insight-text">
+                    <p class="insight-date">10 DEC 2025</p>
+                    <h3>The Future of AI in Enterprise: A Narsimha Viewpoint</h3>
+                    <p>Read our latest whitepaper on integrating generative AI to redefine operational boundaries and efficiency.</p>
+                    <a href="#" class="read-more-link">Read More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="page-hero">
+            <h1>Our Foundation: Trust and Innovation</h1>
+            <p>Built on the principles of integrity and forward-thinking technology.</p>
+        </section>
+
+        <section class="services-preview-tcs" style="padding-top: 40px;"> 
+            <h2>Our Mission & Vision</h2>
+            <div class="insight-container" style="border-left-color: #FFCC00; max-width: 900px; padding: 40px;">
+                <p>Narsimha Infotech is dedicated to crafting scalable, secure, and custom IT solutions that drive measurable business growth for our clients. Our vision is to be recognized as a leader in reliable digital transformation, rooted in deep technical expertise and client-first commitment.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet Our Core Team</h2>
+            <p class="team-intro">The architects and investors behind every solution we deliver.</p>
+
+            <div class="team-cards-container">
+                
+                <div class="team-card">
+                    <img src="https://uploads.onecompiler.io/447ffsnrp/447fg4m6w/copilot_image_1765630754252.jpeg" alt="Profile of J Hemharshith" class="profile-img">
+                    <h3>J Hemharshith</h3>
+                    <p class="role">Lead Web Developer</p>
+                    <p class="bio">Expert in modern front-end frameworks and UI/UX design, building efficient and intuitive digital interfaces.</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="https://uploads.onecompiler.io/447ffsnrp/447fg4m6w/copilot_image_1765630852761.jpeg" alt="Profile of Vikas GS" class="profile-img">
+                    <h3>Vikas GS</h3>
+                    <p class="role">Senior Web Developer</p>
+                    <p class="bio">Focuses on robust back-end architecture and optimization, providing the foundational speed and reliability for our applications.</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="https://uploads.onecompiler.io/447ffsnrp/447fg4m6w/copilot_image_1765630828808.jpeg" alt="Profile of Achyuta K" class="profile-img">
+                    <h3>Achyuta K</h3>
+                    <p class="role">Chief Investor & Strategist</p>
+                    <p class="bio">Provides crucial financial backing and long-term strategic guidance to ensure scalable growth and market resilience.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="https://uploads.onecompiler.io/447ffsnrp/447fg4m6w/copilot_image_1765630751802.jpeg" alt="Profile of Sushrut P" class="profile-img">
+                    <h3>Sushrut P</h3>
+                    <p class="role">Founding Investor & Partner</p>
+                    <p class="bio">Instrumental in the company's formation, guiding technological vision and investment in future-proof platforms.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services-section" class="page-hero">
+            <h1>Scalable Solutions for Every Stage of Growth</h1>
+            <p>Clear, tiered pricing for the digital foundation your business needs.</p>
+        </section>
+
+        <section class="pricing-tiers-section">
+            <h2 class="section-heading"><span class="accent-line">🏷️ Website Development Packages (One Year Plan)</span></h2>
+            <p class="section-description">Comprehensive, one-time setup costs including design, development, and a full year of basic infrastructure.</p>
+
+            <div class="table-container">
+                <table class="corporate-table">
+                    <thead>
+                        <tr>
+                            <th>Plan Name</th>
+                            <th>Key Features & Description</th>
+                            <th class="price-column">First Year Price (One-Time)</th>
+                            <th class="price-column">Renewal (Per Year)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**Basic**</td>
+                            <td>1-page website, Domain + Hosting, Free SSL. Perfect for small businesses or starters.</td>
+                            <td class="price-column">₹3,000</td>
+                            <td class="price-column">₹2,400</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td>**Standard**</td>
+                            <td>4–6 pages, Contact form, Gallery, WhatsApp button, Free SSL + basic SEO setup</td>
+                            <td class="price-column">₹8,000 – ₹12,000</td>
+                            <td class="price-column">₹3,000 – ₹3,500</td>
+                        </tr>
+                        <tr>
+                            <td>**Premium**</td>
+                            <td>All Standard features, Online orders/booking system, Fast cloud hosting, Backup & Security</td>
+                            <td class="price-column">₹15,000 – ₹25,000</td>
+                            <td class="price-column">₹5,000 – ₹6,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="pricing-tiers-section light-bg" id="contact-section">
+            <h2 class="section-heading"><span class="accent-line">📧 Get Started Today!</span></h2>
+            <p class="section-description">Ready to discuss your digital transformation needs?</p>
+            
+            <div style="margin: 40px auto; padding: 20px 30px; background: #FFFBE6; border: 2px solid #FFCC00; border-radius: 8px; max-width: 500px; text-align: center;">
+                <h3 style="color: #004D40; margin-bottom: 10px; font-size: 1.5em;">Official Contact Email</h3>
+                <p style="font-size: 1.3em; font-weight: 700;">
+                    <a href="mailto:narsimha.infotech.official@Gmail.com" style="color: #88001B; text-decoration: none;">narsimha.infotech.official@Gmail.com</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Narsimha Infotech. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a 
